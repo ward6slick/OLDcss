@@ -1,0 +1,44 @@
+/* https://userstyles.org/styles/90565/firefox-adjust-white-flash-when-opening-new-tab */
+/* https://userstyles.org/styles/142191/remove-new-tab-flash */
+@-moz-document url-prefix(about:preferences), url-prefix(about:blank), url-prefix(about:newtab) {
+  html, body, #newtab-customize-overlay {
+    background: #303030 !important;
+    color: #b2b2b2 !important;
+  } 
+}
+
+@-moz-document url(chrome://browser/content/browser.xul)
+{
+
+  browser[type="content-primary"]
+  {
+    background: #303030 !important;
+    color: #b2b2b2 !important;
+  }
+}
+
+@-moz-document url(chrome://browser/content/browser.xul)
+{
+
+  browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content
+  {
+    background: #1B1B1B url("chrome://global/skin/media/imagedoc-darknoise.png") repeat fixed !important;
+    color: #b2b2b2 !important;
+  }
+}
+
+@-moz-document url(about:blank),
+               url(about:preferences),
+               url(about:config),
+               url(about:newtab)
+{
+  #newtab-window,
+  html,
+  body, 
+  #newtab-customize-overlay 
+  {
+    background: #1B1B1B url("chrome://global/skin/media/imagedoc-darknoise.png") repeat fixed;
+    color: #b2b2b2 !important;
+  }
+}
+
