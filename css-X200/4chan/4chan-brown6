@@ -1,43 +1,42 @@
-/* 4chan - orange1 */
+/* 4chan - brown6 */
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain(4chan.org) {
 
+/* hides Captcha table row */
 /* captcha */
   #g-recaptcha,  #qrCaptchaContainer
   {
     filter: invert(92%) hue-rotate(180deg) !important;
   }
-
+   
 /* body background and text color */
-html, body { background:none !important; background-color:rgb( 6, 30, 38 ) !important; color:rgb(195, 195, 195) !important; }
+html, body { background:none !important; background-color:rgb(45, 34, 31) !important; color:rgb(195, 195, 195) !important; }
 body { margin:2px !important; }
-
-/* Thread Watcher */
-.threadWatcher, #twHeader, .extPanel.reply { background-color:rgb( 0, 0, 0 ) !important; color:rgb(195, 195, 195) !important; border:none !important; font-weight: normal !important; width: 200px !important;}
 
 /* primary link color */
 body a, .quoteLink, .quotelink, .replylink, .useremail, span.nameBlock .useremail, .burichan_new .backlink a, .yotsuba_b_new .backlink a
-{ color:rgb( 159, 100, 74 ) !important; text-decoration:none !important; }
+{ color:rgb(155, 160, 91) !important; text-decoration:none !important; }
 
 body a:hover, a.replylink:hover, a.replylink:not(:hover), div#absbot a:not(:hover), .useremail:hover, span.nameBlock .useremail:hover, .burichan_new .backlink a:hover, .yotsuba_b_new .backlink a:hover
-{ color:rgb(195, 195, 195) !important; text-decoration:none !important; }
+{ color:rgb(195,195,195) !important; text-decoration:none !important; }
 
 a.replylink:not(:hover), div#absbot a:not(:hover) { color:rgb(95, 95, 130) !important; }
+
 
 hr { opacity:0 !important; }
 
 div.backlink { font-size:13px !important; }
 
 /* poster name */
-.name, .post-author { color:rgb( 101, 131, 137 ) !important; font-weight: normal !important;}
+.name, .post-author { color:rgb(101, 155, 166) !important; font-weight: normal !important;}
 a.useremail span { color:rgb(110, 110, 149) !important; text-decoration:none !important; }
 a.useremail:hover span { color:rgb(95, 95, 130) !important; text-decoration:none !important; }
 .useremail:not(:hover) .name, .useremail:not(:hover) .postertrip
 { color:rgb(110, 110, 149) !important; }
 
 /* poster trip */
-span.postertrip, .post-tripcode { color:rgb( 92, 93, 91 ) !important; font-weight:bold !important; }
+span.postertrip, .post-tripcode { color:rgb(61, 148, 174) !important; font-weight:bold !important; }
 div.post div.postInfo span.nameBlock span.postertrip { !important; }
 
 .recaptchatable { border:0 !important; }
@@ -46,14 +45,18 @@ div.post div.postInfo span.nameBlock span.postertrip { !important; }
 
 #styleSwitcher { display:none !important; }
 
-/* post number */
-.postNum a, .ws .postNum a { color:rgb( 197, 186, 160 ) !important; }
-.postNum a:hover, div.post div.postInfo span.postNum a:hover, .posteruid .hand:hover, .ws .postNum a:hover
-{ color:rgb(195, 195, 195) !important; }
-   
+/* settings box */
+#settingsBox, #theme.panel, #filters.panel, kbd {
+    width:auto !important;
+    overflow:hidden !important;
+    background-color:rgb(26, 30, 33) !important;
+    border-radius:3px 3px 3px 3px !important;
+    border:0 !important;
+}
+
 #bannerCnt { border:0 !important; width:auto !important; height:auto !important; }
 
-/* reply box */
+/* reply to a thread */
 .post.reply:not(.preview) {
     width:100% !important;
     min-width:100% !important;
@@ -62,16 +65,35 @@ div.post div.postInfo span.nameBlock span.postertrip { !important; }
 .post.reply {
     overflow:hidden !important;
     display:block !important;
-    background-color:rgb( 32, 56, 64 ) !important;
+    background-color:rgb(71, 60, 57) !important;
     border-radius:0px 0px 0px 0px !important;
     border:0 !important;
     padding-right:0px !important;
     padding-left:7px !important;
     outline:0 !important
 }
-.post { color:rgb(195,195,195) !important; }
+.post { color:rgb(195, 195, 195) !important; }
 .replyContainer { width:99.2% !important; }
 
+/* post form */
+/* ===== **** THIS IS THE REAL WIDTH **** ===== */
+///*table.postForm, #quickReply { width:55% !important; }
+
+#togglePostFormLink { display:none !important; }
+#postForm { display:table !important; }
+
+/* this is the left column of the post form "Name"/"Email"/"Subject" */
+///* table.postForm > tbody > tr > td:first-child {
+   background-color:rgb(39, 43, 46) !important;
+   color:rgb(205, 205, 205) !important;  font-weight: normal !important;
+   border:0 !important;
+   width:15% !important;
+}
+
+.qrWindow { width:55% !important; }
+.qrForm form table { width:100% !important; }
+
+/* #search-box { display:none !important; } */
 #content .center { display:none !important; }
 
 .c-thread img { border:0 !important; }
@@ -100,12 +122,10 @@ select,
 #settings select,
 textarea,
 .button-group button
-   
-/* search box  */
  {
    -webkit-appearance: none;
    -moz-appearance: none;
-   background-color:rgb( 32, 56, 64 ) !important;
+   background-color:rgb(71, 60, 57) !important;
    color:rgb(205, 205, 205) !important;
    outline:none !important;
    border-width:0 !important;
@@ -124,21 +144,12 @@ textarea,
    border-width:0 !important;
 }
 
-/* pages box */
-.pagelist, table.pages {
-   background:none !important;
-   background-color:rgb( 32, 56, 64 ) !important;
-   color:rgb(80, 80, 80) !important;
-   border:0 !important;
-   border-radius:0px 0px 0px 0px !important;
-}
-   
 input[type="checkbox"] { -moz-appearance:checkbox !important; -webkit-appearance:checkbox !important; }
 #settingsMenu button { -moz-appearance:button !important; -webkit-appearance:button !important; }
 
 /* make everything the same width */
 input[name="name"], input[name="email"], textarea[name="com"]
-{ width:98.9% !important; }
+{ width:98.5% !important; }
 input[name="sub"]
 { width:70% !important; }
 input[type="submit"] { width:19% !important; }
@@ -147,16 +158,7 @@ ul.rules { display:none !important; }
 body:not(.is_index):not(.is_catalog) input[name="email"] { width:70% !important; }
 body:not(.is_index):not(.is_catalog) input[name="sub"] { width:90% !important; }
 
-#qrForm input[name="email"] { width:98.9% !important; }
-
-/* settings box */
-#settingsBox, #theme.panel, #filters.panel, kbd {
-    width:auto !important;
-    overflow:hidden !important;
-    background-color:rgb(30, 30, 30) !important;
-    border-radius:3px 3px 3px 3px !important;
-    border:0 !important;
-}
+#qrForm input[name="email"] { width:98.5% !important; }
 
 /* resize the email field for /b/ */
 form[action="https://sys.4chan.org/b/post"] input[name="email"],
@@ -181,7 +183,7 @@ input[type="text"]:focus, input[type="password"]:focus, input:focus:not([type]),
 #quickReply form .postForm { width:100% !important; padding-left:15px !important; padding-bottom:5px !important; }
 #qrHeader, #qrepHeader, div.postHover { background-color:rgb(25, 25, 25) !important; color:rgb(195, 195, 195) !important; border:none !important; }
 
-/* adblocker */
+/* pwease disable your adbwocker */
 body > div.center, body > form > div.center { display:none !important; }
 .click-me { display:none !important; }
 
@@ -206,11 +208,16 @@ td[style="padding: 18px 7px 18px 7px;"], td[style="padding: 4px 7px 12px 7px;"] 
 
 span.filter-preview { display:none !important; }
 
+/* post number */
+.postNum a, .ws .postNum a { color:rgb(101, 155, 166) !important; }
+.postNum a:hover, div.post div.postInfo span.postNum a:hover, .posteruid .hand:hover, .ws .postNum a:hover
+{ color:rgb(195,195,195) !important; }
+
 .capcode.id_mod:hover { color:rgb(128, 0, 128) !important }
 
 /* [Reply] link */
-a.replylink { color:rgb(110, 110, 149) !important; }
-a.replylink:hover { color:rgb(95, 95, 130) !important; }
+a.replylink { color:rgb(195, 195, 195) !important; }
+a.replylink:hover { color:rgb(195,195,195) !important; }
 hr { border-color:#000 !important; }
 
 /* subject */
@@ -240,7 +247,7 @@ span.capcodeMod * { color:#808 !important; }
 /* remove style switcher */
 .stylechanger { display:none !important; }
 
-/* delete form */
+/* FINALLY FIX THE DELETE FORM */
 .bottomCtrl { width:100% !important; }
 .deleteform { display:none !important; }
 input[value="Report"] { display:none !important; }
@@ -248,6 +255,14 @@ input[value="delete"] { display:none !important; }
 
 .postMenuBtn { display:none !important; }
 
+/* pages box */
+.pagelist, table.pages {
+   background:none !important;
+   background-color:rgb(71, 60, 57) !important;
+   color:rgb(80, 80, 80) !important;
+   border:0 !important;
+   border-radius:0px 0px 0px 0px !important;
+}
 td[align="left"] table.pages { width:70% !important; }
 table.pages input[type="submit"] { width:70% !important; }
 table.pages td { color:rgb(80, 80, 80) !important; }
@@ -290,7 +305,7 @@ li.current a { color:rgb(205, 205, 205) !important; }
 
 .content { color:rgb(195, 195, 195) !important; }
 
-/* ? */
+/* why isn't this in it yet */
 .boxcontent, .boxcontent ul, .boxcontent dl dt { color:rgb(195, 195, 195) !important; }
 .boxcontent dd { border:none !important; padding-bottom:5px !important; }
 .boxcontent { font-size:13px !important; }
@@ -306,10 +321,13 @@ h3[style="text-decoration: underline; display: inline;"] { text-decoration:none 
 /* "Click Me!" */
 #first-run { background:none !important; color:rgb(195,195,195) !important; border:none !important; }
 
+/* Thread Watcher */
+.threadWatcher, #twHeader, .extPanel.reply { background-color:rgb(45, 34, 31) !important; color:rgb(195, 195, 195) !important; border:none !important; font-weight: normal !important; width: 200px !important;}
+
 /* Settings box */
 div.panelHeader { border:none !important; }
 
-/* the post that appears when hovering over a quote link */
+/* the post that appears when hovering over a quote link - this was impossible to style */
 #quote-preview:not(.ws) { background:none !important; background-color:rgb(39, 39, 39) !important; color:rgb(195, 195, 195) !important; border:0 !important; outline:none !important; width:75% !important; overflow:hidden !important; box-shadow:0px 0px 0px 0px rgba(0,0,0,0.9) !important; }
 
 #post-preview { background:none !important; background-color:rgb(39, 39, 39) !important; color:rgb(195,195,195) !important; border:0 !important; outline:none !important; box-shadow:0px 0px 0px 0px rgba(0,0,0,0.9) !important; border-radius:0px 0px 0px 0px !important; }
@@ -318,7 +336,7 @@ div.panelHeader { border:none !important; }
 
 .preview.highlight { background:none !important; background-color:rgb(119, 107, 83) !important; border:0 !important; outline:none !important; overflow:hidden !important; }
 
-/* "4chan pass" */
+/* all this "4chan pass" nonsense */
 .passNotice { display:none !important; }
 tr td .desktop { display:none !important; }
 
@@ -342,7 +360,7 @@ table.flashListing tr:nth-of-type(2n+1), .highlightPost {
 div.closed { display:none !important; }
 
 /* for the catalog page */
-.btn-wrap .button { color:rgb(110, 110, 149) !important; text-decoration:none !important; }
+.btn-wrap .button { color:rgb(0,0,0) !important; text-decoration:none !important; }
 .btn-wrap .button:hover { color:rgb(95, 95, 130) !important; text-decoration:none !important; }
 .cataloglink { border:none !important; }
 
@@ -362,13 +380,13 @@ p[style="font-size: large; color: red; text-align: center;"],
 span[style="font-size: 14pt; color: red; font-weight: bold;"]
 { color:rgb(195, 195, 195) !important; }
 
-/* border around the logo */
+/* hopefully fix the border around the logo */
 div.boardBanner > img { border:1px solid rgb(195, 195, 195) !important; }
 
-/* the ad spaces */
+/* the ad spaces are popping up again for me */
 .middlead.center, .topad.center, .bottomad.center { display:none !important; }
 
-/* remove hidden reply stubs */
+/* May update: remove hidden reply stubs */
 .thread.post-hidden .replyContainer { display:none !important; }
 
 .pages.depagelink { display:none !important; }
@@ -380,25 +398,25 @@ div.boardBanner > img { border:1px solid rgb(195, 195, 195) !important; }
 .postarea[align="center"] table[border="0"] { width:50% !important; }
 .postarea[align="center"] table[border="0"] form { text-align:center !important; }
 .postarea[align="center"] table[border="0"] form table { width:100% !important; }
-/* red */
+/* red can go fuck itself */
 span[style="color: red;"] { color:rgb(80, 80, 80) !important; }
 span[style="color: rgb(204,87,17);"] { color:rgb(195, 195, 195) !important; }
 img[alt="4chan"] { margin-top:15px !important; border:1px solid rgb(195, 195, 195) !important; }
 
-/* menus on the front page */
+/* finally fix the menus on the front page */
 .yui-skin-sam .yuimenu .bd { background-color:rgb(50,50,50) !important; }
 .yuimenuitemlabel, .yuimenuitemlabel:hover { color:rgb(230,230,230) !important; }
 .yuimenuitem:hover { background-color:rgb(30,30,30) !important; }
 
 /* post highlight color change */
 .reply:target, .reply.highlight {
-   background-color:rgb(39,39,39) !important;
-   color:rgb(225,225,225) !important;
+   background-color:rgb(39, 39, 39) !important;
+   color:rgb(225, 225, 225) !important;
 }
 .reply:target span.name, .reply.highlight span.name { color:rgb(132, 52, 52) !important; }
 
 .reply:target a.useremail span, .reply.highlight a.useremail span
-{ color:rgb(110, 110, 149) !important; text-decoration:none !important; }
+{ color:rgb(195, 195, 195) !important; text-decoration:none !important; }
 .reply:target a.useremail:hover span, .reply.highlight a.useremail:hover span
 { color:rgb(95, 95, 130) !important; text-decoration:none !important; }
 
@@ -411,7 +429,9 @@ img[alt="4chan"] { margin-top:15px !important; border:1px solid rgb(195, 195, 19
 
 }
 
-/* text board looks */
+/* let's make the text boards look pretty */
+/* these rules are for the YOTSUBA text boards style
+   and these rules affect only the dis.4chan.org domain */
 @-moz-document domain(dis.4chan.org) {
 
 body { font-family:arial,helvetica,sans-serif !important; }

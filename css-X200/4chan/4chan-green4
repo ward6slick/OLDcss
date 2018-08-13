@@ -149,7 +149,7 @@ input[type="checkbox"] { -moz-appearance:checkbox !important; -webkit-appearance
 
 /* make everything the same width */
 input[name="name"], input[name="email"], textarea[name="com"]
-{ width:98.9% !important; }
+{ width:98.5% !important; }
 input[name="sub"]
 { width:70% !important; }
 input[type="submit"] { width:19% !important; }
@@ -158,7 +158,7 @@ ul.rules { display:none !important; }
 body:not(.is_index):not(.is_catalog) input[name="email"] { width:70% !important; }
 body:not(.is_index):not(.is_catalog) input[name="sub"] { width:90% !important; }
 
-#qrForm input[name="email"] { width:98.9% !important; }
+#qrForm input[name="email"] { width:98.5% !important; }
 
 /* resize the email field for /b/ */
 form[action="https://sys.4chan.org/b/post"] input[name="email"],
@@ -179,7 +179,7 @@ input[type="text"]:focus, input[type="password"]:focus, input:focus:not([type]),
 { border:0 !important; }
 
 /* new quick reply */
-#quickReply { width:24% !important; }
+#quickReply { width:22.5% !important; }
 #quickReply form .postForm { width:100% !important; padding-left:15px !important; padding-bottom:5px !important; }
 #qrHeader, #qrepHeader, div.postHover { background-color:rgb(25, 25, 25) !important; color:rgb(195, 195, 195) !important; border:none !important; }
 
@@ -508,5 +508,4 @@ h3 .postinfo { font-size:16px !important; padding-left:7px !important; }
     height: 10px !important;
     width: 10px !important;
   }
-
 
