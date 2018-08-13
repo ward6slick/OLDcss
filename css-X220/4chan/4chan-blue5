@@ -1,4 +1,4 @@
-/* 4chan - orange1 */
+/* 4chan - blue5 */
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain(4chan.org) {
@@ -10,15 +10,15 @@
   }
 
 /* body background and text color */
-html, body { background:none !important; background-color:rgb( 6, 30, 38 ) !important; color:rgb(195, 195, 195) !important; }
+html, body { background:none !important; background-color:rgb( 23, 42, 59 ) !important; color:rgb(195, 195, 195) !important; }
 body { margin:2px !important; }
 
 /* Thread Watcher */
-.threadWatcher, #twHeader, .extPanel.reply { background-color:rgb( 0, 0, 0 ) !important; color:rgb(195, 195, 195) !important; border:none !important; font-weight: normal !important; width: 200px !important;}
+.threadWatcher, #twHeader, .extPanel.reply { background-color:rgb( 23, 42, 59 ) !important; color:rgb(195, 195, 195) !important; border:none !important; font-weight: normal !important; width: 200px !important;}
 
 /* primary link color */
 body a, .quoteLink, .quotelink, .replylink, .useremail, span.nameBlock .useremail, .burichan_new .backlink a, .yotsuba_b_new .backlink a
-{ color:rgb( 159, 100, 74 ) !important; text-decoration:none !important; }
+{ color:rgb( 114, 137, 116 ) !important; text-decoration:none !important; }
 
 body a:hover, a.replylink:hover, a.replylink:not(:hover), div#absbot a:not(:hover), .useremail:hover, span.nameBlock .useremail:hover, .burichan_new .backlink a:hover, .yotsuba_b_new .backlink a:hover
 { color:rgb(195, 195, 195) !important; text-decoration:none !important; }
@@ -30,14 +30,14 @@ hr { opacity:0 !important; }
 div.backlink { font-size:13px !important; }
 
 /* poster name */
-.name, .post-author { color:rgb( 101, 131, 137 ) !important; font-weight: normal !important;}
+.name, .post-author { color:rgb( 88, 111, 139 ) !important; font-weight: normal !important;}
 a.useremail span { color:rgb(110, 110, 149) !important; text-decoration:none !important; }
 a.useremail:hover span { color:rgb(95, 95, 130) !important; text-decoration:none !important; }
 .useremail:not(:hover) .name, .useremail:not(:hover) .postertrip
 { color:rgb(110, 110, 149) !important; }
 
 /* poster trip */
-span.postertrip, .post-tripcode { color:rgb( 92, 93, 91 ) !important; font-weight:bold !important; }
+span.postertrip, .post-tripcode { color:rgb( 118, 143, 148 ) !important; font-weight:bold !important; }
 div.post div.postInfo span.nameBlock span.postertrip { !important; }
 
 .recaptchatable { border:0 !important; }
@@ -47,7 +47,7 @@ div.post div.postInfo span.nameBlock span.postertrip { !important; }
 #styleSwitcher { display:none !important; }
 
 /* post number */
-.postNum a, .ws .postNum a { color:rgb( 197, 186, 160 ) !important; }
+.postNum a, .ws .postNum a { color:rgb( 61, 130, 96 ) !important; }
 .postNum a:hover, div.post div.postInfo span.postNum a:hover, .posteruid .hand:hover, .ws .postNum a:hover
 { color:rgb(195, 195, 195) !important; }
    
@@ -62,7 +62,7 @@ div.post div.postInfo span.nameBlock span.postertrip { !important; }
 .post.reply {
     overflow:hidden !important;
     display:block !important;
-    background-color:rgb( 32, 56, 64 ) !important;
+    background-color:rgb( 49, 68, 85 ) !important;
     border-radius:0px 0px 0px 0px !important;
     border:0 !important;
     padding-right:0px !important;
@@ -105,7 +105,7 @@ textarea,
  {
    -webkit-appearance: none;
    -moz-appearance: none;
-   background-color:rgb( 32, 56, 64 ) !important;
+   background-color:rgb( 49, 68, 85 ) !important;
    color:rgb(205, 205, 205) !important;
    outline:none !important;
    border-width:0 !important;
@@ -127,7 +127,7 @@ textarea,
 /* pages box */
 .pagelist, table.pages {
    background:none !important;
-   background-color:rgb( 32, 56, 64 ) !important;
+   background-color:rgb( 49, 68, 85 ) !important;
    color:rgb(80, 80, 80) !important;
    border:0 !important;
    border-radius:0px 0px 0px 0px !important;
