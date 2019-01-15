@@ -1,39 +1,12 @@
-@-moz-document url-prefix(about:preferences), url-prefix(about:blank), url-prefix(about:newtab) {
-  html, body, #newtab-customize-overlay {
-    background: #303030 !important;
-    color: #b2b2b2 !important;
-  } 
-}
-
 @-moz-document url(chrome://browser/content/browser.xul)
 {
-
-  browser[type="content-primary"]
-  {
-    background: #303030 !important;
-    color: #b2b2b2 !important;
-  }
-}
-
-@-moz-document url(chrome://browser/content/browser.xul)
-{
-
-  browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content
-  {
-    color: #b2b2b2 !important;
-  }
-}
-
-@-moz-document url(about:blank),
-               url(about:preferences),
-               url(about:config),
-               url(about:newtab)
-{
-  #newtab-window,
-  html,
-  body, 
-  #newtab-customize-overlay 
-  {
-    color: #b2b2b2 !important;
-  }
+   #main-window,
+   browser[type="content-primary"],
+   browser[type="content"],
+   tabbrowser#content,
+   #content,
+   browser[type="content"] > html
+   {
+      background: #232323 !important;
+   }
 }
